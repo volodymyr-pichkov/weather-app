@@ -31,7 +31,6 @@ const Weather = () => {
         throw new Error(errorData.message || "City not found");
       }
       const data = await response.json();
-      console.log(data);
       const icon =
         weatherIcons[data.weather[0].icon] || weatherIcons["default"];
       const {
