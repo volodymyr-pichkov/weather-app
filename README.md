@@ -28,4 +28,4 @@ OpenWeatherMap API
 
 git clone <https://github.com/volodymyr-pichkov/weather-app.git>
 
-cd <weather-app>
+cd weather-app
