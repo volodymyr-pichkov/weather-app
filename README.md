@@ -20,6 +20,8 @@ Tailwind CSS
 
 OpenWeatherMap API
 
+Zod
+
 ---
 
 ## Getting Started

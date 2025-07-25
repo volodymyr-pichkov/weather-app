@@ -75,5 +75,3 @@ const Weather = () => {
 };
 
 export default Weather;
-
-// адаптив

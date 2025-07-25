@@ -1,8 +1,24 @@
+import { z } from "zod";
 import humidity_icon from "@/assets/humidity.png";
 import wind_icon from "@/assets/wind.png";
 
+const WeatherDataSchema = z.object({
+  icon: z.string().optional(),
+  temperature: z.number(),
+  location: z.string(),
+  humidity: z.number().min(0).max(100),
+  windSpeed: z.number().nonnegative(),
+});
+
 const WeatherInfo = ({ weatherData }) => {
   if (!weatherData) return null;
+
+  try {
+    WeatherDataSchema.parse(weatherData);
+  } catch (e) {
+    console.error("Ошибка в данных:", e.errors);
+    return <p>Invalid weather data</p>;
+  }
 
   return (
     <div className="flex flex-col items-center gap-8">
