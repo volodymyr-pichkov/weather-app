@@ -60,10 +60,14 @@ const Weather = () => {
   }, [search]);
 
   return (
-    <div className="weather place-self-center p-10 rounded-xl flex flex-col items-center bg-diagonal-gradient">
+    <div className="weather place-self-center p-6 sm:p-8 md:p-10 rounded-xl flex flex-col items-center bg-diagonal-gradient max-w-full w-[90vw] sm:w-[400px] md:w-[450px]">
       <SearchBar search={search} />
 
-      {error && <p className="text-red-500 text-2xl font-bold mt-4">{error}</p>}
+      {error && (
+        <p className="text-red-500 text-xl sm:text-2xl font-bold mt-4 text-center">
+          {error}
+        </p>
+      )}
 
       {loading ? (
         <Loading />
