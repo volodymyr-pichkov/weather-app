@@ -1,8 +1,8 @@
 import { useEffect, useState, useCallback } from "react";
 import SearchBar from "@/components/Weather/components/SearchBar";
 import WeatherInfo from "@/components/Weather/components/WeatherInfo";
-import weatherIcons from "@/components/Weather/components/weatherIcons";
 import Loading from "@/components/Weather/components/Loading";
+import weatherIcons from "@/components/Weather/components/weatherIcons";
 
 const Weather = () => {
   const API_KEY = import.meta.env.VITE_API_KEY;
